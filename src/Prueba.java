@@ -11,6 +11,12 @@ public class Prueba {
 		return array;
 	}
 	
+	public static int[] generarDiezMilNumeros() {
+        int []array = new int[1000];
+		
+		return array;
+	}
+	
 	public static void main(String[] args) {
 
 	}
