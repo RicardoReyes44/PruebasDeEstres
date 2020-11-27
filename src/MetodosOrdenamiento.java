@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class MetodosOrdenamiento {
 	
@@ -139,4 +140,8 @@ public class MetodosOrdenamiento {
 		}
 		
 	}
+	
+	public static void mostrar(long[] array) {
+    	System.out.println("Array ordenado: " + Arrays.toString(array));
+    }
 }

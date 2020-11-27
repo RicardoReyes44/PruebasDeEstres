@@ -1,31 +1,32 @@
+import java.util.Scanner;
 
 public class Prueba {
 
-	public static int[] generarMilNumeros() {
-        int []array = new int[1000];
+	public static long[] generarMilNumeros() {
+        long []array = new long[1000];
 		
 		for(int i=0; i<1000; i++) {
-			array[i] = (int)(Math.random()*100);
+			array[i] = (long)(Math.random()*100);
 		}
 		
 		return array;
 	}
 	
-	public static int[] generarDiezMilNumeros() {
-        int []array = new int[10000];
+	public static long[] generarDiezMilNumeros() {
+        long []array = new long[10000];
 		
         for(int i=0; i<10000; i++) {
-			array[i] = (int)(Math.random()*100);
+			array[i] = (long)(Math.random()*100);
 		}
         
 		return array;
 	}
 	
-	public static int[] generarCienMilNumeros() {
-        int []array = new int[100000];
+	public static long[] generarCienMilNumeros() {
+        long []array = new long[100000];
 		
         for(int i=0; i<100000; i++) {
-			array[i] = (int)(Math.random()*100);
+			array[i] = (long)(Math.random()*100);
 		}
         
 		return array;
@@ -33,11 +34,14 @@ public class Prueba {
 	
 	public static void main(String[] args) {
 		
-		int []mil = generarMilNumeros();
-		int []diezMil = generarDiezMilNumeros();
-		int []CienMil = generarCienMilNumeros();
+		Scanner entrada = new Scanner(System.in);
+		long []mil = generarMilNumeros();
+		long []diezMil = generarDiezMilNumeros();
+		long []CienMil = generarCienMilNumeros();
 		
 		while(true) {
+			
+			
 			
 		}
 
