@@ -104,8 +104,9 @@ public class MetodosOrdenamiento {
 		
 		public static long[] ejecutar(long[] array) {
 			
-			
-			return null;
+            long []ordenado = quickSort(array, 0, array.length-1);
+
+			return ordenado;
 		}
 		
 		public static long[] quickSort(long[] array, int izq, int der){
