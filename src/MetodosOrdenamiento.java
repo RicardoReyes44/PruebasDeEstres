@@ -61,7 +61,9 @@ public class MetodosOrdenamiento {
 	}// class Burbuja
 	
 	static class Insercion {
-		
+		public static void ordenadorInsercion(long []numeros) {
+			
+		}
 	}
 
 }
