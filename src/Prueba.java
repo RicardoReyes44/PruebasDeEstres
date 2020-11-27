@@ -41,7 +41,36 @@ public class Prueba {
 		
 		while(true) {
 			
+			System.out.println("Introduce una opcion: ");
+			int op = entrada.nextInt();
 			
+			if(op==1) {
+				
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(mil);
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja2(mil);
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja3(mil);
+				MetodosOrdenamiento.Insercion.ordenadorInsercion(mil);
+				MetodosOrdenamiento.mostrar(mil);
+				MetodosOrdenamiento.OrdenamientoPorSeleccion.ordenamientoSeleccion(mil);
+				MetodosOrdenamiento.mostrar(mil);
+				long ordenado[] = MetodosOrdenamiento.QuickSort.ejecutar(mil);
+				MetodosOrdenamiento.mostrar(ordenado);
+				MetodosOrdenamiento.ShellSort.ordenar(mil);
+				MetodosOrdenamiento.mostrar(mil);
+				MetodosOrdenamiento.Radix.orden(mil);
+				MetodosOrdenamiento.mostrar(mil);
+				
+			}else if(op==2) {
+				
+				
+				
+			}else if(op==3) {
+				
+				
+				
+			}else {
+				System.out.println("Opcion invalida, vuelve a intentarlo");
+			}
 			
 		}
 
