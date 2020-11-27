@@ -82,6 +82,8 @@ public class MetodosOrdenamiento {
 	}
 
 	public static class OrdenamientoPorSeleccion{
-
+		public static void ordenamientoSeleccion(long []numeros) {
+			
+		}
 	}
 }
