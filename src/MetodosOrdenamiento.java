@@ -20,7 +20,11 @@ public class MetodosOrdenamiento {
 			}
             tFin = System.nanoTime();
 			System.out.println("Tiempo de ejecucion en ordenamiento por burbuja: " + (tFin-tInicio));
-		}        
+		}
+		
+		public static void ordenacionBurbuja2(long []numeros) {
+        	
+		}
 	}// class Burbuja
 
 }
