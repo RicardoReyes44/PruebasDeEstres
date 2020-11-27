@@ -59,5 +59,9 @@ public class MetodosOrdenamiento {
 			System.out.println("Tiempo de ejecucion en ordenamiento por burbuja: " + (tFin-tInicio));
 	    }
 	}// class Burbuja
+	
+	static class Insercion {
+		
+	}
 
 }
