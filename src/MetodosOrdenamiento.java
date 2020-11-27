@@ -145,7 +145,27 @@ public class MetodosOrdenamiento {
 		
 		public static void ordenar(long []numeros) {
 			
+			int intervalo = numeros.length/2;
+			tInicio = System.nanoTime();
 			
+			while(intervalo>0) {
+				for(int i=intervalo; i<numeros.length; i++) {
+					int j=i-intervalo;
+					while(j>=0) {
+						int k=j+intervalo;
+						if(numeros[j]<=numeros[k]) {
+							j=-1;
+						}else {
+							long aux=numeros[j];
+							numeros[j] = numeros[k];
+							numeros[k] = aux;
+							j-=intervalo;
+							
+						}
+					}
+				}
+				intervalo = intervalo/2;
+			}
 			
 		}
 	}
