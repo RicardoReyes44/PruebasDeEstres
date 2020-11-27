@@ -143,7 +143,11 @@ public class MetodosOrdenamiento {
 	
     static class ShellSort{
 		
-		
+		public static void ordenar(long []numeros) {
+			
+			
+			
+		}
 	}
 	
     static class Radix{
