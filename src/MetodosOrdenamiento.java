@@ -148,7 +148,7 @@ public class MetodosOrdenamiento {
 	
     static class ShellSort{
 		
-		public static void ordenar(long []numeros) {
+		public static long[] ordenar(long []numeros) {
 			
 			int intervalo = numeros.length/2;
 			tInicio = System.nanoTime();
@@ -172,7 +172,7 @@ public class MetodosOrdenamiento {
 				intervalo = intervalo/2;
 			}tFin = System.nanoTime();
  		   System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
-			
+			return numeros;
 		}
 	}
 	
