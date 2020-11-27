@@ -83,7 +83,17 @@ public class MetodosOrdenamiento {
 
 	public static class OrdenamientoPorSeleccion{
 		public static void ordenamientoSeleccion(long []numeros) {
-			
+            for(int i=0; i<numeros.length-1; i++) {
+				
+				for(int j=i; j<numeros.length; j++) {
+					
+					if(numeros[i]>numeros[j]) {
+						long minimo = numeros[i];
+						numeros[i] = numeros[j];
+						numeros[j] = minimo;	
+					}
+				}
+			}
 		}
 	}
 }
