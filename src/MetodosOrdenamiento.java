@@ -42,7 +42,7 @@ public class MetodosOrdenamiento {
 		    return numeros;
 		}
 		
-		public static void ordenacionBurbuja3(long []numeros) {
+		public static long[] ordenacionBurbuja3(long []numeros) {
 			int i=1;
 			tInicio = System.nanoTime();
 	     	   do {
@@ -60,7 +60,8 @@ public class MetodosOrdenamiento {
 	     	   }while(i<numeros.length);
 	     	tFin = System.nanoTime();
 			System.out.println("Tiempo de ejecucion en ordenamiento por burbuja: " + (tFin-tInicio));
-	    }
+	        return numeros;
+		}
 	}// class Burbuja
 	
 	static class Insercion {
