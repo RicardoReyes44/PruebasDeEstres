@@ -12,8 +12,12 @@ public class Prueba {
 	}
 	
 	public static int[] generarDiezMilNumeros() {
-        int []array = new int[1000];
+        int []array = new int[10000];
 		
+        for(int i=0; i<10000; i++) {
+			array[i] = (int)(Math.random()*100);
+		}
+        
 		return array;
 	}
 	
