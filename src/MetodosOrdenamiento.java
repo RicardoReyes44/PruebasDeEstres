@@ -40,8 +40,21 @@ public class MetodosOrdenamiento {
 		}
 		
 		public static void ordenacionBurbuja3(long []numeros) {
-	           
-	   }
+			int i=1;
+	     	   do {
+	     		   
+	     		   for(int j=0; j<numeros.length-i; j++) {
+	 					
+	 					if(numeros[j]>numeros[j+1]) {
+	 						long aux = numeros[j];
+	 						numeros[j] = numeros[j+1];
+	 						numeros[j+1] = aux;
+	 					}
+	 				}
+	     		   
+	     		   i=1+i;
+	     	   }while(i<numeros.length);
+	    }
 	}// class Burbuja
 
 }
