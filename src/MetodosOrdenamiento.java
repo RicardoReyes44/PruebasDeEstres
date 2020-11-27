@@ -83,6 +83,7 @@ public class MetodosOrdenamiento {
 
 	public static class OrdenamientoPorSeleccion{
 		public static void ordenamientoSeleccion(long []numeros) {
+			tInicio = System.nanoTime();
             for(int i=0; i<numeros.length-1; i++) {
 				
 				for(int j=i; j<numeros.length; j++) {
@@ -94,6 +95,10 @@ public class MetodosOrdenamiento {
 					}
 				}
 			}
+            tFin = System.nanoTime();
+			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 		}
 	}
+	
+	
 }
