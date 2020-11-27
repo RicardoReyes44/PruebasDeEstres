@@ -5,7 +5,7 @@ public class MetodosOrdenamiento {
 	static long tInicio, tFin;
 	
 	static class Burbuja{
-		public static void ordenacionBurbuja1(long []numeros) {
+		public static long[] ordenacionBurbuja1(long []numeros) {
 			
 			tInicio = System.nanoTime();
             for(int i=1; i<=numeros.length-1; i++) {
@@ -21,6 +21,7 @@ public class MetodosOrdenamiento {
 			}
             tFin = System.nanoTime();
 			System.out.println("Tiempo de ejecucion en ordenamiento por burbuja: " + (tFin-tInicio));
+		    return numeros;
 		}
 		
 		public static void ordenacionBurbuja2(long []numeros) {

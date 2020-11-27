@@ -41,12 +41,16 @@ public class Prueba {
 		
 		while(true) {
 			
+			System.out.println("------------MENU------------");
+			System.out.println("1.- Calcular con 1000 numeros");
+			System.out.println("2.- Calcular con 10000 numeros");
+			System.out.println("3.- Calcular con 100000 numeros");
 			System.out.println("Introduce una opcion: ");
 			int op = entrada.nextInt();
 			
 			if(op==1) {
 				
-				MetodosOrdenamiento.ShellSort.ordenar(mil);
+				MetodosOrdenamiento.Burbuja
 				
 			}else if(op==2) {
 				
