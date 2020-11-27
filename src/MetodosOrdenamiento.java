@@ -69,7 +69,6 @@ public class MetodosOrdenamiento {
 				aux = numeros[i];
 				
 				
-				
 				for(int j=i-1; j>=0 && numeros[j]>aux; j--) {
 					
 					numeros[j+1] = numeros[j];
@@ -82,4 +81,7 @@ public class MetodosOrdenamiento {
 		}
 	}
 
+	public static class OrdenamientoPorSeleccion{
+
+	}
 }
