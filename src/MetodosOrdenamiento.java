@@ -64,6 +64,7 @@ public class MetodosOrdenamiento {
 		public static void ordenadorInsercion(long []numeros) {
             long aux;
 			
+            tInicio = System.nanoTime();
 			for(int i=1; i<numeros.length; i++) {
 				aux = numeros[i];
 				
@@ -76,6 +77,8 @@ public class MetodosOrdenamiento {
 					
 				}// segundo for
 			}// primero for
+			tFin = System.nanoTime();
+			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 		}
 	}
 
