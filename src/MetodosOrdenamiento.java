@@ -143,6 +143,7 @@ public class MetodosOrdenamiento {
 	
     static class Radix{
     	public static void orden(long[]numeros) {
+    		  tInicio = System.nanoTime();
     	      if(numeros.length == 0)
     	          return;
     	          int[][] np = new int[numeros.length][2];
@@ -173,6 +174,8 @@ public class MetodosOrdenamiento {
     	          for(l=q[i];l!=-1;l=np[l][1])
     	        	  numeros[j++] = np[l][0];
     	       }//for
+    	       tFin = System.nanoTime();
+    		   System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
     	}//metodo
   	}//metodo
 	
