@@ -32,7 +32,16 @@ public class Prueba {
 	}
 	
 	public static void main(String[] args) {
+		
+		int []mil = generarMilNumeros();
+		int []diezMil = generarDiezMilNumeros();
+		int []CienMil = generarCienMilNumeros();
+		
+		while(true) {
+			
+		}
 
+		
 	}
 
 }
