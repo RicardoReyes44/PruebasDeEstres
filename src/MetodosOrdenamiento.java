@@ -102,6 +102,11 @@ public class MetodosOrdenamiento {
 	
 	public static class QuickSort{
 		
+		public static long[] quickSort(long[] array, int izq, int der){
+			
+			
+			return array;
+		}
 		
 	}
 }
