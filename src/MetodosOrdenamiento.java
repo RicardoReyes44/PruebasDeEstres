@@ -102,6 +102,12 @@ public class MetodosOrdenamiento {
 	
 	public static class QuickSort{
 		
+		public static long[] ejecutar(long[] array) {
+			
+			
+			return null;
+		}
+		
 		public static long[] quickSort(long[] array, int izq, int der){
 			
 			long pivote = array[izq];
