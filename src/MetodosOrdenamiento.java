@@ -165,7 +165,8 @@ public class MetodosOrdenamiento {
 					}
 				}
 				intervalo = intervalo/2;
-			}
+			}tFin = System.nanoTime();
+ 		   System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 			
 		}
 	}
