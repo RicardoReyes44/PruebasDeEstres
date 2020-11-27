@@ -104,7 +104,10 @@ public class MetodosOrdenamiento {
 		
 		public static long[] ejecutar(long[] array) {
 			
+			tInicio = System.nanoTime();
             long []ordenado = quickSort(array, 0, array.length-1);
+            tFin = System.nanoTime();
+			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 
 			return ordenado;
 		}
