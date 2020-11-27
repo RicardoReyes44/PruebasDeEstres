@@ -24,6 +24,9 @@ public class Prueba {
 	public static int[] generarCienMilNumeros() {
         int []array = new int[100000];
 		
+        for(int i=0; i<100000; i++) {
+			array[i] = (int)(Math.random()*100);
+		}
         
 		return array;
 	}
