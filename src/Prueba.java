@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Prueba {
@@ -50,7 +51,22 @@ public class Prueba {
 			
 			if(op==1) {
 				
-				MetodosOrdenamiento.Burbuja
+				System.out.println("Burbuja 1: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(mil.clone()))+"\n");
+				System.out.println("Burbuja 2: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.Burbuja.ordenacionBurbuja2(mil.clone()))+"\n");
+				System.out.println("Burbuja 3: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.Burbuja.ordenacionBurbuja3(mil.clone()))+"\n");
+				System.out.println("Insercion: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.Insercion.ordenadorInsercion(mil.clone()))+"\n");
+				System.out.println("Seleccion: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.OrdenamientoPorSeleccion.ordenamientoSeleccion(mil.clone()))+"\n");
+				System.out.println("QuickSort: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.QuickSort.ejecutar(mil.clone()))+"\n");
+				System.out.println("Shellsort: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.ShellSort.ordenar(mil.clone()))+"\n");
+				System.out.println("Radix: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.Radix.orden(mil.clone()))+"\n");
 				
 			}else if(op==2) {
 				
