@@ -62,7 +62,20 @@ public class MetodosOrdenamiento {
 	
 	static class Insercion {
 		public static void ordenadorInsercion(long []numeros) {
+            long aux;
 			
+			for(int i=1; i<numeros.length; i++) {
+				aux = numeros[i];
+				
+				
+				
+				for(int j=i-1; j>=0 && numeros[j]>aux; j--) {
+					
+					numeros[j+1] = numeros[j];
+					numeros[j] = aux;
+					
+				}// segundo for
+			}// primero for
 		}
 	}
 
