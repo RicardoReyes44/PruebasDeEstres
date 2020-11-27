@@ -70,7 +70,30 @@ public class Prueba {
 				
 			}else if(op==2) {
 				
-				
+				System.out.println("Burbuja 1: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(diezMil.clone());
+				System.out.println();
+				System.out.println("Burbuja 2: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja2(diezMil.clone());
+				System.out.println();
+				System.out.println("Burbuja 3: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja3(diezMil.clone());
+				System.out.println();
+				System.out.println("Insercion: ");
+				MetodosOrdenamiento.Insercion.ordenadorInsercion(diezMil.clone());
+				System.out.println();
+				System.out.println("Seleccion: ");
+				MetodosOrdenamiento.OrdenamientoPorSeleccion.ordenamientoSeleccion(diezMil.clone());
+				System.out.println();
+				System.out.println("QuickSort: ");
+				MetodosOrdenamiento.QuickSort.ejecutar(diezMil.clone());
+				System.out.println();
+				System.out.println("Shellsort: ");
+				MetodosOrdenamiento.ShellSort.ordenar(diezMil.clone());
+				System.out.println();
+				System.out.println("Radix: ");
+				MetodosOrdenamiento.Radix.orden(diezMil.clone());
+				System.out.println();
 				
 			}else if(op==3) {
 				
