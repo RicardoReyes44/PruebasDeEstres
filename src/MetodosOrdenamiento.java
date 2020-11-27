@@ -65,7 +65,7 @@ public class MetodosOrdenamiento {
 	}// class Burbuja
 	
 	static class Insercion {
-		public static void ordenadorInsercion(long []numeros) {
+		public static long[] ordenadorInsercion(long []numeros) {
             long aux;
 			
             tInicio = System.nanoTime();
@@ -82,11 +82,12 @@ public class MetodosOrdenamiento {
 			}// primero for
 			tFin = System.nanoTime();
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+		    return numeros;
 		}
 	}
 
 	public static class OrdenamientoPorSeleccion{
-		public static void ordenamientoSeleccion(long []numeros) {
+		public static long[] ordenamientoSeleccion(long []numeros) {
 			tInicio = System.nanoTime();
             for(int i=0; i<numeros.length-1; i++) {
 				
@@ -101,6 +102,7 @@ public class MetodosOrdenamiento {
 			}
             tFin = System.nanoTime();
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+		    return numeros;
 		}
 	}
 	
