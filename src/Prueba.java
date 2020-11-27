@@ -46,19 +46,7 @@ public class Prueba {
 			
 			if(op==1) {
 				
-				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(mil);
-				MetodosOrdenamiento.Burbuja.ordenacionBurbuja2(mil);
-				MetodosOrdenamiento.Burbuja.ordenacionBurbuja3(mil);
-				MetodosOrdenamiento.Insercion.ordenadorInsercion(mil);
-				MetodosOrdenamiento.mostrar(mil);
-				MetodosOrdenamiento.OrdenamientoPorSeleccion.ordenamientoSeleccion(mil);
-				MetodosOrdenamiento.mostrar(mil);
-				long ordenado[] = MetodosOrdenamiento.QuickSort.ejecutar(mil);
-				MetodosOrdenamiento.mostrar(ordenado);
 				MetodosOrdenamiento.ShellSort.ordenar(mil);
-				MetodosOrdenamiento.mostrar(mil);
-				MetodosOrdenamiento.Radix.orden(mil);
-				MetodosOrdenamiento.mostrar(mil);
 				
 			}else if(op==2) {
 				
@@ -71,6 +59,7 @@ public class Prueba {
 			}else {
 				System.out.println("Opcion invalida, vuelve a intentarlo");
 			}
+			System.out.println();
 			
 		}
 
