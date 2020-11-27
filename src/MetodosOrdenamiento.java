@@ -104,6 +104,26 @@ public class MetodosOrdenamiento {
 		
 		public static long[] quickSort(long[] array, int izq, int der){
 			
+			long pivote = array[izq];
+			int i = izq, j=der;
+			long aux;
+			
+			while(i<j) {
+				while(array[i]<=pivote && i<j) i++;
+				while(array[j]>pivote) j--;
+				if(i<j) {
+					aux = array[i];
+					array[i] = array[j];
+					array[j] = aux;
+				}
+			}
+			array[izq] = array[j];
+			array[j] = pivote;
+			
+			if(izq<j-1)
+				quickSort(array, izq, j-1);
+			if(j+1<der)
+				quickSort(array, j+1, der);
 			
 			return array;
 		}
