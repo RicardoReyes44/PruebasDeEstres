@@ -3,15 +3,15 @@ import java.util.Arrays;
 public class MetodosOrdenamiento {
 	
 	static long tInicio, tFin;
-	static int comparaciones = 0;
-	static int intercambios = 0;
-	static int recorridos = 0;
+	static long comparaciones = 0;
+	static long intercambios = 0;
+	static long recorridos = 0;
 	
 	static class Burbuja{
 		public static long[] ordenacionBurbuja1(long []numeros) {
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
 			tInicio = System.nanoTime();
             for(int i=1; i<=numeros.length-1; i++) {
             	recorridos++;
@@ -37,9 +37,9 @@ public class MetodosOrdenamiento {
 		}
 		
 		public static long[] ordenacionBurbuja2(long []numeros) {
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
 			tInicio = System.nanoTime();
             for(int i=1; i<numeros.length; i++) {
 				recorridos++;
@@ -66,9 +66,9 @@ public class MetodosOrdenamiento {
 		
 		public static long[] ordenacionBurbuja3(long []numeros) {
 			int i=1;
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
 			tInicio = System.nanoTime();
 	     	   do {
 	     		   
@@ -98,9 +98,9 @@ public class MetodosOrdenamiento {
 	
 	static class Insercion {
 		public static long[] ordenadorInsercion(long []numeros) {
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
             long aux;
 			
             tInicio = System.nanoTime();
@@ -128,9 +128,9 @@ public class MetodosOrdenamiento {
 
 	public static class OrdenamientoPorSeleccion{
 		public static long[] ordenamientoSeleccion(long []numeros) {
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
 			tInicio = System.nanoTime();
             for(int i=0; i<numeros.length-1; i++) {
 				recorridos++;
@@ -219,9 +219,9 @@ public class MetodosOrdenamiento {
 		
 		public static long[] ordenar(long []numeros) {
 			
-			int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+			long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
 			int intervalo = numeros.length/2;
 			tInicio = System.nanoTime();
 			
@@ -260,9 +260,9 @@ public class MetodosOrdenamiento {
 	
     static class Radix{
     	public static long[] orden(long[]numeros) {
-    		int comparaciones = 0;
-			int intercambios = 0;
-			int recorridos = 0;
+    		long comparaciones = 0;
+			long intercambios = 0;
+			long recorridos = 0;
     		  tInicio = System.nanoTime();
     	      if(numeros.length == 0) {
     	    	  comparaciones++;
