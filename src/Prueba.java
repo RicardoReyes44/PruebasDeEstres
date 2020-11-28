@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Prueba {
@@ -49,6 +50,7 @@ public class Prueba {
 			System.out.println("Introduce una opcion: ");
 			int op = entrada.nextInt();
 			
+			try {
 			if(op==1) {
 				
 				System.out.println("Burbuja 1: ");
@@ -97,12 +99,38 @@ public class Prueba {
 				
 			}else if(op==3) {
 				
-				
+				System.out.println("Burbuja 1: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(CienMil.clone());
+				System.out.println();
+				System.out.println("Burbuja 2: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja2(CienMil.clone());
+				System.out.println();
+				System.out.println("Burbuja 3: ");
+				MetodosOrdenamiento.Burbuja.ordenacionBurbuja3(CienMil.clone());
+				System.out.println();
+				System.out.println("Insercion: ");
+				MetodosOrdenamiento.Insercion.ordenadorInsercion(CienMil.clone());
+				System.out.println();
+				System.out.println("Seleccion: ");
+				MetodosOrdenamiento.OrdenamientoPorSeleccion.ordenamientoSeleccion(CienMil.clone());
+				System.out.println();
+				System.out.println("QuickSort: ");
+				MetodosOrdenamiento.QuickSort.ejecutar(CienMil.clone());
+				System.out.println();
+				System.out.println("Shellsort: ");
+				MetodosOrdenamiento.ShellSort.ordenar(CienMil.clone());
+				System.out.println();
+				System.out.println("Radix: ");
+				MetodosOrdenamiento.Radix.orden(CienMil.clone());
+				System.out.println();
 				
 			}else {
 				System.out.println("Opcion invalida, vuelve a intentarlo");
 			}
 			System.out.println();
+			}catch(InputMismatchException error) {
+				System.out.println("Error en la entrada de datos <" + error + ">");
+			}
 			
 		}
 
