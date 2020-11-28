@@ -168,6 +168,8 @@ public class MetodosOrdenamiento {
             System.out.println("Cantidad de comparaciones: " + comparaciones);
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 
+			intercambios = comparaciones = recorridos = 0;
+			
 			return ordenado;
 		}
 		
@@ -217,28 +219,41 @@ public class MetodosOrdenamiento {
 		
 		public static long[] ordenar(long []numeros) {
 			
+			int comparaciones = 0;
+			int intercambios = 0;
+			int recorridos = 0;
 			int intervalo = numeros.length/2;
 			tInicio = System.nanoTime();
 			
 			while(intervalo>0) {
+				comparaciones++;
+				recorridos++;
 				for(int i=intervalo; i<numeros.length; i++) {
+					recorridos++;
+					comparaciones++;
 					int j=i-intervalo;
 					while(j>=0) {
+						recorridos++;
+						comparaciones++;
 						int k=j+intervalo;
 						if(numeros[j]<=numeros[k]) {
 							j=-1;
 						}else {
+							intercambios++;
 							long aux=numeros[j];
 							numeros[j] = numeros[k];
 							numeros[k] = aux;
 							j-=intervalo;
-							
 						}
+						comparaciones++;
 					}
 				}
 				intervalo = intervalo/2;
 			}tFin = System.nanoTime();
- 		   System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+			System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
+ 		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 			return numeros;
 		}
 	}
