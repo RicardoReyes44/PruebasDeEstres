@@ -68,19 +68,19 @@ public class MetodosOrdenamiento {
 			int recorridos = 0;
 			tInicio = System.nanoTime();
 	     	   do {
-	     		  recorridos++;
+	     		   
 	     		   for(int j=0; j<numeros.length-i; j++) {
 	 					comparaciones++;
 	 					recorridos++;
 	 					if(numeros[j]>numeros[j+1]) {
 	 						comparaciones++;
-	 						recorridos++;
 	 						long aux = numeros[j];
 	 						numeros[j] = numeros[j+1];
 	 						numeros[j+1] = aux;
 	 						intercambios++;
 	 					}
 	 				}
+	     		   recorridos++;
 	     		   i=1+i;
 	     		   comparaciones++;
 	     	   }while(i<numeros.length);
@@ -95,21 +95,29 @@ public class MetodosOrdenamiento {
 	
 	static class Insercion {
 		public static long[] ordenadorInsercion(long []numeros) {
+			int comparaciones = 0;
+			int intercambios = 0;
+			int recorridos = 0;
             long aux;
 			
             tInicio = System.nanoTime();
 			for(int i=1; i<numeros.length; i++) {
 				aux = numeros[i];
-				
-				
+				comparaciones++;
+				recorridos++;
 				for(int j=i-1; j>=0 && numeros[j]>aux; j--) {
-					
+					comparaciones++;
+					recorridos++;
 					numeros[j+1] = numeros[j];
 					numeros[j] = aux;
+					intercambios++;
 					
 				}// segundo for
 			}// primero for
 			tFin = System.nanoTime();
+			System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 		    return numeros;
 		}
