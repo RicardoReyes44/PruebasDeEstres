@@ -34,19 +34,29 @@ public class MetodosOrdenamiento {
 		}
 		
 		public static long[] ordenacionBurbuja2(long []numeros) {
+			int comparaciones = 0;
+			int intercambios = 0;
+			int recorridos = 0;
 			tInicio = System.nanoTime();
             for(int i=1; i<numeros.length; i++) {
-				
+				recorridos++;
+				comparaciones++;
 				for(int j=0; j<numeros.length-i; j++) {
-					
+					recorridos++;
+					comparaciones++;
 					if(numeros[j]>numeros[j+1]) {
+						comparaciones++;
 						long aux = numeros[j];
 						numeros[j] = numeros[j+1];
 						numeros[j+1] = aux;
+						intercambios++;
 					}
 				}
 			}
             tFin = System.nanoTime();
+            System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
 			System.out.println("Tiempo de ejecucion en ordenamiento por burbuja: " + (tFin-tInicio));
 		    return numeros;
 		}
