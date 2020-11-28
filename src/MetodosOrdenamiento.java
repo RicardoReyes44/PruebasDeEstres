@@ -3,6 +3,9 @@ import java.util.Arrays;
 public class MetodosOrdenamiento {
 	
 	static long tInicio, tFin;
+	static int comparaciones = 0;
+	static int intercambios = 0;
+	static int recorridos = 0;
 	
 	static class Burbuja{
 		public static long[] ordenacionBurbuja1(long []numeros) {
@@ -160,6 +163,9 @@ public class MetodosOrdenamiento {
 			tInicio = System.nanoTime();
             long []ordenado = quickSort(array, 0, array.length-1);
             tFin = System.nanoTime();
+            System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 
 			return ordenado;
@@ -172,9 +178,19 @@ public class MetodosOrdenamiento {
 			long aux;
 			
 			while(i<j) {
-				while(array[i]<=pivote && i<j) i++;
-				while(array[j]>pivote) j--;
+				comparaciones++;
+				recorridos++;
+				while(array[i]<=pivote && i<j) { i++;
+				comparaciones++;
+				recorridos++;
+				}
+				while(array[j]>pivote) { j--;
+				comparaciones++;
+				recorridos++;
+				}
 				if(i<j) {
+					comparaciones++;
+				    intercambios++;
 					aux = array[i];
 					array[i] = array[j];
 					array[j] = aux;
@@ -183,10 +199,14 @@ public class MetodosOrdenamiento {
 			array[izq] = array[j];
 			array[j] = pivote;
 			
-			if(izq<j-1)
+			if(izq<j-1) {
+				comparaciones++;
 				quickSort(array, izq, j-1);
-			if(j+1<der)
+			}
+			if(j+1<der) {
+				comparaciones++;
 				quickSort(array, j+1, der);
+			}
 			
 			return array;
 		}
