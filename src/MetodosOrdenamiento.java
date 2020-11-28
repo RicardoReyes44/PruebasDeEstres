@@ -125,12 +125,19 @@ public class MetodosOrdenamiento {
 
 	public static class OrdenamientoPorSeleccion{
 		public static long[] ordenamientoSeleccion(long []numeros) {
+			int comparaciones = 0;
+			int intercambios = 0;
+			int recorridos = 0;
 			tInicio = System.nanoTime();
             for(int i=0; i<numeros.length-1; i++) {
-				
+				recorridos++;
+				comparaciones++;
 				for(int j=i; j<numeros.length; j++) {
-					
+					recorridos++;
+					comparaciones++;
 					if(numeros[i]>numeros[j]) {
+						comparaciones++;
+						intercambios++;
 						long minimo = numeros[i];
 						numeros[i] = numeros[j];
 						numeros[j] = minimo;	
@@ -138,6 +145,9 @@ public class MetodosOrdenamiento {
 				}
 			}
             tFin = System.nanoTime();
+            System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
 			System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 		    return numeros;
 		}
