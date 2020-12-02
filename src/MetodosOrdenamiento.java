@@ -462,7 +462,9 @@ public class MetodosOrdenamiento {
 			
 			return ordenado;
     	}
-    	
+    }
+    
+    static class MezclaNatural {
     	
     }
     
