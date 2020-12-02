@@ -109,6 +109,9 @@ public class Prueba {
 				System.out.println(Arrays.toString(MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo))+"\n");
 				System.out.println("Mezcla directa: ");
 				System.out.println(Arrays.toString(MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(mil.clone()))+"\n");
+				System.out.println("Mezcla natural: ");
+				MetodosOrdenamiento.MezclaNatural.mezclaNatural(CienMil.clone());
+				System.out.println();
 				
 			}else if(op==2) {
 
@@ -144,6 +147,9 @@ public class Prueba {
 				System.out.println("Mezcla directa: ");
 				MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(CienMil.clone());
 				System.out.println();
+				System.out.println("Mezcla natural: ");
+				MetodosOrdenamiento.MezclaNatural.mezclaNatural(CienMil.clone());
+				System.out.println();
 				
 			}else if(op==3) {
 				
@@ -178,6 +184,9 @@ public class Prueba {
 				System.out.println();
 				System.out.println("Mezcla directa: ");
 				MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(CienMil.clone());
+				System.out.println();
+				System.out.println("Mezcla natural: ");
+				MetodosOrdenamiento.MezclaNatural.mezclaNatural(CienMil.clone());
 				System.out.println();
 				
 			}else if(op==4){
