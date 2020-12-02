@@ -465,7 +465,13 @@ public class MetodosOrdenamiento {
     }
     
     static class MezclaNatural {
+    	public static void mezclaDirecta2(long arreglo[]) {
+    				
+    	}
+    		
+    	public static void mezclaNatural(long numeros[]) {
     	
+    	}
     }
     
 	public static void mostrar(long[] array) {
