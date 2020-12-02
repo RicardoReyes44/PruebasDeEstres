@@ -115,7 +115,7 @@ public class Prueba {
 				
 			}else if(op==2) {
 
-				System.out.println("Burbuja 1: ");
+			    System.out.println("Burbuja 1: ");
 				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(diezMil.clone());
 				System.out.println();
 				System.out.println("Burbuja 2: ");
