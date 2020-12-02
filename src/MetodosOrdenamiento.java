@@ -380,6 +380,7 @@ public class MetodosOrdenamiento {
     		
             tInicio = System.nanoTime();
     		if(arreglo.length>1) {
+    			comparaciones++;
     			int numElementosIzq = arreglo.length/2;
     			int numElementosDer=arreglo.length-numElementosIzq;
     			
@@ -387,11 +388,15 @@ public class MetodosOrdenamiento {
     			long arregloDerecho[] = new long[numElementosDer];
     			
     			for(i=0; i<numElementosIzq; i++) {
+    				recorridos++;
     				arregloIzquierdo[i] = arreglo[i];
+    				comparaciones++;
     			}
     			
     			for(i=numElementosIzq; i<numElementosIzq+numElementosDer; i++) {
     				arregloDerecho[i-numElementosIzq]=arreglo[i];
+    				comparaciones++;
+    				recorridos++;
     			}
     			
     			//Ahora se aplica la recursividad
@@ -406,6 +411,8 @@ public class MetodosOrdenamiento {
     			*/
     			
     			while(arregloIzquierdo.length!=j && arregloDerecho.length!=k) {
+    				comparaciones++;
+    				recorridos++;
     				if(arregloIzquierdo[j]<arregloDerecho[k]) {
     					arreglo[i] = arregloIzquierdo[j];
     					i++;
@@ -415,6 +422,8 @@ public class MetodosOrdenamiento {
     					i++;
     					k++;
     				}
+    				intercambios++;
+    				comparaciones++;
     			}
     			
     			//Arreglo izquierdo
@@ -422,12 +431,18 @@ public class MetodosOrdenamiento {
     				arreglo[i] = arregloIzquierdo[j];
     				i++;
     				j++;
+    				intercambios++;
+    				recorridos++;
+    				comparaciones++;
     			}
     			
     			while(arregloDerecho.length!=k) {
     				arreglo[i] = arregloDerecho[k];
     				i++;
     				k++;
+    				intercambios++;
+    				recorridos++;
+    				comparaciones++;
     			}
     			
     		}// if
@@ -439,7 +454,7 @@ public class MetodosOrdenamiento {
 			recorridos = comparaciones = intercambios = 0;
     		return arreglo;
     	}
-    	
+
     }
     
 	public static void mostrar(long[] array) {
