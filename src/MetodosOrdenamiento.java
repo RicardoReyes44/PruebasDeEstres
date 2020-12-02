@@ -332,6 +332,9 @@ public class MetodosOrdenamiento {
          	int i=0, j=0, k=0;
          	tInicio = System.nanoTime();
          	while(i<numeros.length && j<numeros2.length) {
+         		recorridos++;
+         		intercambios++;
+         		comparaciones++;
          		if(numeros[i]<numeros2[j]) {
          			arrayOrdenado[k] = numeros[i];
          			i++;
@@ -339,16 +342,23 @@ public class MetodosOrdenamiento {
          			arrayOrdenado[k] = numeros2[j];
          			j++;
          		}
+         		comparaciones++;
          		k++;
          	}
          	
          	while(i<numeros.length) {
+         		recorridos++;
+         		intercambios++;
+         		comparaciones++;
          		arrayOrdenado[k] = numeros[i];
      			i++;
      			k++;
          	}
          	
              while(j<numeros2.length) {
+            	recorridos++;
+            	intercambios++;
+            	comparaciones++;
              	arrayOrdenado[k] = numeros2[j];
      			j++;
      			k++;
