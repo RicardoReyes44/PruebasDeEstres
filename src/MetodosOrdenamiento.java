@@ -469,6 +469,7 @@ public class MetodosOrdenamiento {
             int i,j,k;
     		
     		if(arreglo.length>1) {
+    			comparaciones++;
     			int numElementosIzq = arreglo.length/2;
     			int numElementosDer=arreglo.length-numElementosIzq;
     			
@@ -476,11 +477,15 @@ public class MetodosOrdenamiento {
     			long arregloDerecho[] = new long[numElementosDer];
     			
     			for(i=0; i<numElementosIzq; i++) {
+    				comparaciones++;
     				arregloIzquierdo[i] = arreglo[i];
+    				recorridos++;
     			}
     			
     			for(i=numElementosIzq; i<numElementosIzq+numElementosDer; i++) {
     				arregloDerecho[i-numElementosIzq]=arreglo[i];
+    				comparaciones++;
+    				recorridos++;
     			}
     			
     			//Ahora se aplica la recursividad
@@ -495,15 +500,20 @@ public class MetodosOrdenamiento {
     			*/
     			
     			while(arregloIzquierdo.length!=j && arregloDerecho.length!=k) {
+    				recorridos++;
+    				comparaciones++;
     				if(arregloIzquierdo[j]<arregloDerecho[k]) {
     					arreglo[i] = arregloIzquierdo[j];
+    					comparaciones++;
     					i++;
     					j++;
     				}else {
     					arreglo[i] = arregloDerecho[k];
     					i++;
+    					comparaciones++;
     					k++;
     				}
+    				intercambios++;
     			}
     			
     			//Arreglo izquierdo
@@ -511,12 +521,18 @@ public class MetodosOrdenamiento {
     				arreglo[i] = arregloIzquierdo[j];
     				i++;
     				j++;
+    				intercambios++;
+    				comparaciones++;
+    				recorridos++;
     			}
     			
     			while(arregloDerecho.length!=k) {
     				arreglo[i] = arregloDerecho[k];
     				i++;
+    				intercambios++;
     				k++;
+    				comparaciones++;
+    				recorridos++;
     			}
     		}//if
     	}
@@ -533,24 +549,31 @@ public class MetodosOrdenamiento {
 	        	
 	        	izquierda = 0;
 	        	ordenado = true;
-	        	
+	        	recorridos++;
 	        	while(izquierda<derecha) {
+	        		recorridos++;
+	        		comparaciones++;
 	        		izq = izquierda;
 	        		while(izq<derecha && numeros[izq]<=numeros[izq+1]) {
 	        			izq++;
+	        			comparaciones++;
+	        			recorridos++;
 	        		}
 	        		der = izq+1;
 	        		while(der==derecha-1 || der<derecha && numeros[der]<=numeros[der+1]) {	
+	        			recorridos++;
+	        			comparaciones++;
 	        		}
 	        		
 	        		if(der<=derecha) {
+	        			comparaciones++;
 	        			mezclaDirecta2(numeros);
 	        			
 	        			ordenado = false;
 	        		}
 	        		izquierda = izq;
 	        	}
-	        	
+	        	comparaciones++;
 	        }while(!ordenado);
 	        
 	        System.out.println("Cantidad de recorridos: " + recorridos);
