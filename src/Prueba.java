@@ -134,8 +134,8 @@ public class Prueba {
 				System.out.println("Radix: ");
 				MetodosOrdenamiento.Radix.orden(diezMil.clone());
 				System.out.println();
-				long primero[] = ejecutar(generarMilNumeros());
-				long segundo[] = ejecutar(mil.clone());
+				long primero[] = ejecutar(generarDiezMilNumeros());
+				long segundo[] = ejecutar(diezMil.clone());
 				System.out.println("Intercalacion: ");
 				MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo);
 				System.out.println();
@@ -165,6 +165,11 @@ public class Prueba {
 				System.out.println();
 				System.out.println("Radix: ");
 				MetodosOrdenamiento.Radix.orden(CienMil.clone());
+				System.out.println();
+				long primero[] = ejecutar(generarCienMilNumeros());
+				long segundo[] = ejecutar(CienMil.clone());
+				System.out.println("Intercalacion: ");
+				MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo);
 				System.out.println();
 				
 			}else if(op==4){
