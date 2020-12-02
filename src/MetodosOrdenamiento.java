@@ -327,10 +327,10 @@ public class MetodosOrdenamiento {
 	
     static class Intercalacion{
          public static long[] ordenar(long[] numeros, long[] numeros2) {
-        	 long arrayOrdenado[] = new long[numeros.length+numeros2.length];
+        	long arrayOrdenado[] = new long[numeros.length+numeros2.length];
      		
          	int i=0, j=0, k=0;
-         	
+         	tInicio = System.nanoTime();
          	while(i<numeros.length && j<numeros2.length) {
          		if(numeros[i]<numeros2[j]) {
          			arrayOrdenado[k] = numeros[i];
@@ -353,6 +353,8 @@ public class MetodosOrdenamiento {
      			j++;
      			k++;
          	}
+            tFin = System.nanoTime();
+             
          	return arrayOrdenado;
     	}
     }
