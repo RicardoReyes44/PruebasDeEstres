@@ -109,7 +109,7 @@ public class Prueba {
 				System.out.println(Arrays.toString(MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo))+"\n");
 				
 			}else if(op==2) {
-				
+
 				System.out.println("Burbuja 1: ");
 				MetodosOrdenamiento.Burbuja.ordenacionBurbuja1(diezMil.clone());
 				System.out.println();
