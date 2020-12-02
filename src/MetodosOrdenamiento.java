@@ -254,7 +254,7 @@ public class MetodosOrdenamiento {
             System.out.println("Cantidad de intercambios: " + intercambios);
             System.out.println("Cantidad de comparaciones: " + comparaciones);
  		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
-			return numeros;
+ 		    return numeros;
 		}
 	}
 	
@@ -354,7 +354,11 @@ public class MetodosOrdenamiento {
      			k++;
          	}
             tFin = System.nanoTime();
-             
+            System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
+ 		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+			recorridos = comparaciones = intercambios = 0;
          	return arrayOrdenado;
     	}
     }
