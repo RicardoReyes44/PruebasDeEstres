@@ -326,7 +326,10 @@ public class MetodosOrdenamiento {
   	}//metodo
 	
     static class Intercalacion{
-    	
+         public static long[] ordenar(long[] numeros, long[] numeros2) {
+    		
+        	
+    	}
     }
     
 	public static void mostrar(long[] array) {
