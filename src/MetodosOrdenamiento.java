@@ -373,6 +373,12 @@ public class MetodosOrdenamiento {
     	}
     }
     
+    static class OrdenamientoMezclaDirecta{
+    	
+    	
+    	
+    }
+    
 	public static void mostrar(long[] array) {
     	System.out.println("Array ordenado: " + Arrays.toString(array));
     }
