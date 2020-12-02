@@ -375,7 +375,9 @@ public class MetodosOrdenamiento {
     
     static class OrdenamientoMezclaDirecta{
     	
-    	
+    	public static long[] ordenamientoMezcla(long arreglo[]) {
+    		
+    	}
     	
     }
     
