@@ -107,6 +107,8 @@ public class Prueba {
 				long segundo[] = ejecutar(mil.clone());
 				System.out.println("Intercalacion: ");
 				System.out.println(Arrays.toString(MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo))+"\n");
+				System.out.println("Mezcla directa: ");
+				System.out.println(Arrays.toString(MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(mil.clone()))+"\n");
 				
 			}else if(op==2) {
 

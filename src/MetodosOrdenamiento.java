@@ -377,8 +377,7 @@ public class MetodosOrdenamiento {
     	
     	public static long[] ordenamientoMezcla(long arreglo[]) {
             int i,j,k;
-    		
-            tInicio = System.nanoTime();
+
     		if(arreglo.length>1) {
     			comparaciones++;
     			int numElementosIzq = arreglo.length/2;
@@ -446,15 +445,25 @@ public class MetodosOrdenamiento {
     			}
     			
     		}// if
+
+    		return arreglo;
+    	}
+    	
+    	public static long[] ejecutarMD(long[] array) {
     		tFin = System.nanoTime();
+
+    		long ordenado[] =ordenamientoMezcla(array);
+    		
             System.out.println("Cantidad de recorridos: " + recorridos);
             System.out.println("Cantidad de intercambios: " + intercambios);
             System.out.println("Cantidad de comparaciones: " + comparaciones);
  		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
 			recorridos = comparaciones = intercambios = 0;
-    		return arreglo;
+			
+			return ordenado;
     	}
-
+    	
+    	
     }
     
 	public static void mostrar(long[] array) {
