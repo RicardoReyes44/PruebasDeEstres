@@ -376,8 +376,9 @@ public class MetodosOrdenamiento {
     static class OrdenamientoMezclaDirecta{
     	
     	public static long[] ordenamientoMezcla(long arreglo[]) {
-int i,j,k;
+            int i,j,k;
     		
+            tInicio = System.nanoTime();
     		if(arreglo.length>1) {
     			int numElementosIzq = arreglo.length/2;
     			int numElementosDer=arreglo.length-numElementosIzq;
@@ -430,7 +431,12 @@ int i,j,k;
     			}
     			
     		}// if
-    		
+    		tFin = System.nanoTime();
+            System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
+ 		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+			recorridos = comparaciones = intercambios = 0;
     		return arreglo;
     	}
     	
