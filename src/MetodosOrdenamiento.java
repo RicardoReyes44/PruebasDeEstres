@@ -527,6 +527,8 @@ public class MetodosOrdenamiento {
 	        int derecha = numeros.length-1;
 	        int der = derecha;
 	        boolean ordenado = false;
+	        
+	        tFin = System.nanoTime();
 	        do {
 	        	
 	        	izquierda = 0;
@@ -550,6 +552,12 @@ public class MetodosOrdenamiento {
 	        	}
 	        	
 	        }while(!ordenado);
+	        
+	        System.out.println("Cantidad de recorridos: " + recorridos);
+            System.out.println("Cantidad de intercambios: " + intercambios);
+            System.out.println("Cantidad de comparaciones: " + comparaciones);
+ 		    System.out.println("Tiempo de ejecucion en ordenamiento: " + (tFin-tInicio));
+			recorridos = comparaciones = intercambios = 0;
     	}
     }
     
