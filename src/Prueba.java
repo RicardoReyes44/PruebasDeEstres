@@ -141,6 +141,9 @@ public class Prueba {
 				System.out.println("Intercalacion: ");
 				MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo);
 				System.out.println();
+				System.out.println("Mezcla directa: ");
+				MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(CienMil.clone());
+				System.out.println();
 				
 			}else if(op==3) {
 				
@@ -172,6 +175,9 @@ public class Prueba {
 				long segundo[] = ejecutar(CienMil.clone());
 				System.out.println("Intercalacion: ");
 				MetodosOrdenamiento.Intercalacion.ordenar(primero, segundo);
+				System.out.println();
+				System.out.println("Mezcla directa: ");
+				MetodosOrdenamiento.OrdenamientoMezclaDirecta.ejecutarMD(CienMil.clone());
 				System.out.println();
 				
 			}else if(op==4){
