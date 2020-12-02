@@ -325,6 +325,10 @@ public class MetodosOrdenamiento {
     	}//metodo
   	}//metodo
 	
+    static class Intercalacion{
+    	
+    }
+    
 	public static void mostrar(long[] array) {
     	System.out.println("Array ordenado: " + Arrays.toString(array));
     }
